@@ -36,3 +36,6 @@ def num_page_view(request, num_page):
         return HttpResponseRedirect(reverse('topic-page', args=[topic]))
     except:
         raise Http404('Out of range of index')
+
+def simple_view(request):
+    return render(request, 'my_app/example.html') # .html
