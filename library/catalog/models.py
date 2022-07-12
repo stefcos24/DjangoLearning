@@ -29,8 +29,8 @@ class Book(models.Model):
     def __str__(self):
         return self.title
 
-    def get_absolute_field(self):
-        return reverse('model_detail', kwargs={'pk': self.pk})
+    def get_absolute_url(self):
+        return reverse('book_detail', kwargs={'pk': self.pk})
 
 
 class Author(models.Model):
